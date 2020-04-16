@@ -28,7 +28,7 @@ public class SaludoController {
     @RequestMapping("/Pase")
     public String inicio() {
 //    	UserRating userRating = webClientBuilder.build().get().uri("http://localhost:8080/user/MANY")
-    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.demomicroservcios12.svc.cluster.local/user/MANY")
+    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.demomicroservcios12.svc.cluster.local/user/Many")
 //    	    	UserRating userRating = webClientBuilder.build().get().uri("http://172.30.52.168:8080/user/MANY")
     			.retrieve().bodyToMono(UserRating.class).block();
     	return (userRating.getUserId());    	
