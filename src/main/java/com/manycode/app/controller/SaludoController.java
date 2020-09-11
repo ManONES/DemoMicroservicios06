@@ -28,7 +28,8 @@ public class SaludoController {
     @RequestMapping("/Pase")
     public String inicio() {
 //    	UserRating userRating = webClientBuilder.build().get().uri("http://localhost:8080/user/MANY")
-    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.demomicroservcios12.svc.cluster.local/user/MANYONE")
+//    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.demomicroservcios12.svc.cluster.local/user/MANYONE")
+    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.5y6.svc.cluster.local/user/MANYONE\") 
 //    	    	UserRating userRating = webClientBuilder.build().get().uri("http://172.30.52.168:8080/user/MANY")
     			.retrieve().bodyToMono(UserRating.class).block();
     	return (userRating.getUserId());    	
@@ -38,7 +39,7 @@ public class SaludoController {
     @RequestMapping("/Pase2")
     public String iniciodos() {
 //    	UserRating userRating = webClientBuilder.build().get().uri("http://localhost:8080/user2/MANY")
-    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.demomicroservcios12.svc.cluster.local/user2/MANYTWO")
+    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.5y6.svc.cluster.local/user2/MANYTWO")
 //    	    	UserRating userRating = webClientBuilder.build().get().uri("http://172.30.52.168:8080/user/MANY")
     			.retrieve().bodyToMono(UserRating.class).block();          
     	return (userRating.getUserId());    	
