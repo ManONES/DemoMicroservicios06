@@ -50,7 +50,7 @@ public class SaludoController {
     @RequestMapping("/Pase3")
     public String iniciotres() {
 //    	UserRating userRating = webClientBuilder.build().get().uri("http://localhost:8080/user2/MANY")
-    	UserRating userRating = webClientBuilder.build().get().uri("http://aplimicroservcios12.5y6.svc.cluster.local/user/MANYTHREE")
+    	UserRating userRating = webClientBuilder.build().get().uri("app6/user/MANYTHREE")
 //    	    	UserRating userRating = webClientBuilder.build().get().uri("http://172.30.52.168:8080/user/MANY")
     			.retrieve().bodyToMono(UserRating.class).block();          
     	return (userRating.getUserId());    	
