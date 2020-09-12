@@ -21,7 +21,7 @@ public class SaludoController {
     @RequestMapping("/Pase1")
     public String iniciouno() {
     	//UserRating userRating = webClientBuilder.build().get().uri("http://demo-microservicios-7-git-hola.apps.us-west-1.starter.openshift-online.com/user/MANYTHREE")
-    	UserRating userRating = webClientBuilder.build().get().uri("http://app0601-proy06099.192.1.1.105.nip.io/user/MANYTHREE")
+    	UserRating userRating = webClientBuilder.build().get().uri("http://app0601-testpost01.apps.us-west-1.starter.openshift-online.com/user/MANYTHREE")
     			.retrieve().bodyToMono(UserRating.class).block();          
     	return (userRating.getUserId());    	
     }
